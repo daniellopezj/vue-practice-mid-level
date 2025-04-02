@@ -2,12 +2,30 @@
 <script setup>
 import WatchTest from './components/WatchTest.vue'
 import ComputedTest from './components/ComputedTest.vue'
+import ParentSlot from './components/slots/ParentSlot.vue'
+import TansitionTest from './components/TansitionTest.vue'
+import ReactiveTest from './components/reactivity/ReactiveTest.vue'
+import {  useRouter } from 'vue-router'
+
+const router= useRouter()
+
+const navigateTo = (path)=>{
+  router.push(path)
+}
 </script>
 
 <template>
 <div>
-  <WatchTest />
+  Esto es una prueba
+  <span @click="navigateTo('/')" >Home</span>
+  <span @click="navigateTo('contact')" >Contacto</span>
+  <RouterView />
+
+  <!-- <WatchTest />
   <ComputedTest />
+  <ParentSlot />
+  <TansitionTest />
+  <ReactiveTest /> -->
 </div>
 </template>
 
