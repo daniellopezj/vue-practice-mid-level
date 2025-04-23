@@ -1,9 +1,11 @@
 <template>
-  <h1>transition</h1>
-  <transition>
-    <p v-if="show">hello</p>
-  </transition>
-  <button @click="show = !show">Toggle</button>
+  <div>
+    <h1>transition</h1>
+    <transition>
+      <p v-if="show">transition</p>
+    </transition>
+    <button @click="show = !show">Toggle</button>
+  </div>
 </template>
 <script setup>
 import { ref } from "vue";

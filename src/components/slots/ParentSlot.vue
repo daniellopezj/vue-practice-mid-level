@@ -1,22 +1,23 @@
 <script setup>
-import ChildSlot from './ChildSlot.vue'
+import ChildSlot from "./ChildSlot.vue";
 </script>
 
 <template>
+  <div>
+    <h1>slot</h1>
 
-  <h1>parent slot</h1>
- 
-  <ChildSlot>
-    <template #header>
-      <h1>This is the header</h1>
-    </template>
+    <ChildSlot>
+      <template #header>
+        <h4>This is the header</h4>
+      </template>
 
-    <!-- <template #default>
+      <!-- <template #default>
       <p>This is the content</p>
     </template> -->
 
-    <template #footer>
-      <em>This is the footer</em>
-    </template>
-  </ChildSlot>
+      <template #footer>
+        <em>This is the footer</em>
+      </template>
+    </ChildSlot>
+  </div>
 </template>

@@ -1,32 +1,32 @@
-
 <script setup>
-import WatchTest from './components/WatchTest.vue'
-import ComputedTest from './components/ComputedTest.vue'
-import ParentSlot from './components/slots/ParentSlot.vue'
-import TansitionTest from './components/TansitionTest.vue'
-import ReactiveTest from './components/reactivity/ReactiveTest.vue'
-import {  useRouter } from 'vue-router'
+import WatchTest from "./components/WatchTest.vue";
+import ComputedTest from "./components/ComputedTest.vue";
+import ParentSlot from "./components/slots/ParentSlot.vue";
+import TansitionTest from "./components/TansitionTest.vue";
+import ReactiveTest from "./components/reactivity/ReactiveTest.vue";
+import { useRouter } from "vue-router";
 
-const router= useRouter()
+const router = useRouter();
 
-const navigateTo = (path)=>{
-  router.push(path)
-}
+const navigateTo = (path) => {
+  router.push(path);
+};
 </script>
 
 <template>
-<div>
-  Esto es una prueba
-  <span @click="navigateTo('/')" >Home</span>
-  <span @click="navigateTo('contact')" >Contacto</span>
-  <RouterView />
+  <div class="main-content">
+    <div>
+      <span @click="navigateTo('/')">Home</span>
+      <span @click="navigateTo('/contact')">Contacto</span>
+      <RouterView />
+    </div>
 
-  <!-- <WatchTest />
-  <ComputedTest />
-  <ParentSlot />
-  <TansitionTest />
-  <ReactiveTest /> -->
-</div>
+    <WatchTest />
+    <ComputedTest />
+    <ParentSlot />
+    <TansitionTest />
+    <ReactiveTest />
+  </div>
 </template>
 
 <style scoped>
@@ -41,5 +41,13 @@ const navigateTo = (path)=>{
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+
+.main-content{
+  margin: 1rem;
+  display: grid;
+  grid-template-columns:  1fr 1fr ;
+  gap: 2rem;
+
 }
 </style>

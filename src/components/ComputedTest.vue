@@ -9,6 +9,7 @@ const fullName = computed({
     return firstName.value + ' jhjjh ' + lastName.value
   },
   set(newValue) {
+    // Assuming the newValue is a string with first and last name separated by a space
     [firstName.value, lastName.value] = newValue.split(' ')
   }
 })
@@ -22,6 +23,7 @@ onMounted(() => {
 
 <template>
 <div>
+  <h1>Computed</h1>
   {{  fullName }}
 </div>
 </template>

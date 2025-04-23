@@ -1,1 +1,3 @@
-<template>CONTACT llego a contacto</template>
+<template>
+    <h1>llego a contacto</h1>
+</template>
